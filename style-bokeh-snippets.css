@@ -1,0 +1,366 @@
+/* Shortened and customized variation on: http://nimbupani.com/bokeh-with-css3-gradients.html */
+
+background-image: 
+	
+	-webkit-gradient(radial, 50% 50%, 36, 50% 50%, 40,from(rgba(150, 111, 195, 0.2)), color-stop(0.3, rgba(150, 111, 195, 0.3)),  to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 16, 50% 50%, 20, from(rgba(224, 124, 203, 0.1)), color-stop(0.2, rgba(224, 124, 203, 0.2)), to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 16, 50% 50%, 20, from(rgba(224, 124, 203, 0.1)), color-stop(0.2, rgba(224, 124, 203, 0.2)), to(transparent)),        
+
+    -webkit-gradient(radial, 50% 50%, 38, 50% 50%, 46, from(rgba(145, 75, 113, 0.3)), color-stop(0.3, rgba(145, 75, 113, 0.4)),  to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 20, 50% 50%, 80, from(rgba(145, 75, 113, 0)), color-stop(0.3, rgba(145, 75, 113, 0.2)),  to(transparent))         
+    ;
+
+background-image: 
+
+	-webkit-radial-gradient(circle contain, rgba(150, 111, 195, 0.2) 36px, rgba(150, 111, 195, 0.3) 38px, transparent 40px),
+
+	-webkit-radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+
+	-webkit-radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+	
+	-webkit-radial-gradient(circle contain, rgba(145, 75, 113, 0.2) 38px, rgba(145, 75, 113, 0.3) 41px, transparent 46px),
+
+	-webkit-radial-gradient(circle contain, rgba(145, 75, 113, 0) 20px, rgba(145, 75, 113, 0.2) 38px, transparent 80px)
+	;   
+
+background-image: 
+
+	-moz-radial-gradient(circle contain, rgba(150, 111, 195, 0.2) 36px, rgba(150, 111, 195, 0.3) 38px, transparent 40px),
+
+    -moz-radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+
+    -moz-radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+
+    -moz-radial-gradient(circle contain, rgba(145, 75, 113, 0.2) 38px, rgba(145, 75, 113, 0.3) 41px, transparent 46px),
+
+    -moz-radial-gradient(circle contain, rgba(145, 75, 113, 0) 20px, rgba(145, 75, 113, 0.2) 38px, transparent 80px)             
+    ;     
+
+background-image: 
+
+	-o-radial-gradient(circle contain, rgba(150, 111, 195, 0.2) 36px, rgba(150, 111, 195, 0.3) 38px, transparent 40px),
+
+    -o-radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+
+    -o-radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+
+    -o-radial-gradient(circle contain, rgba(145, 75, 113, 0.2) 38px, rgba(145, 75, 113, 0.3) 41px, transparent 46px),
+
+    -o-radial-gradient(circle contain, rgba(145, 75, 113, 0) 20px, rgba(145, 75, 113, 0.2) 38px, transparent 80px)            
+    ;
+
+background-image: 
+
+	radial-gradient(circle contain, rgba(150, 111, 195, 0.2) 36px, rgba(150, 111, 195, 0.3) 38px, transparent 40px),
+
+    radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+
+    radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+
+    radial-gradient(circle contain, rgba(145, 75, 113, 0.2) 38px, rgba(145, 75, 113, 0.3) 41px, transparent 46px),
+
+    radial-gradient(circle contain, rgba(145, 75, 113, 0) 20px, rgba(145, 75, 113, 0.2) 38px, transparent 80px)      
+    ;
+
+-moz-background-size: 300px 200px;
+
+background-size: 300px 200px;
+
+background-position: 
+	30px -5px, 
+	80px -70px, 
+	10px -40px, 
+	50px -50px, 
+	20px -80px
+	;   
+
+
+
+/* Re-indented for readability and works the same as http://nimbupani.com/bokeh-with-css3-gradients.html */
+background-image: 
+	
+	-webkit-gradient(radial, 50% 50%, 36, 50% 50%, 40,from(rgba(150, 111, 195, 0.2)), color-stop(0.3, rgba(150, 111, 195, 0.3)),  to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 16, 50% 50%, 20, from(rgba(224, 124, 203, 0.1)), color-stop(0.2, rgba(224, 124, 203, 0.2)), to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 16, 50% 50%, 20, from(rgba(224, 124, 203, 0.1)), color-stop(0.2, rgba(224, 124, 203, 0.2)), to(transparent)),        
+
+    -webkit-gradient(radial, 50% 50%, 38, 50% 50%, 46, from(rgba(145, 75, 113, 0.3)), color-stop(0.3, rgba(145, 75, 113, 0.4)),  to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 20, 50% 50%, 80, from(rgba(145, 75, 113, 0)), color-stop(0.3, rgba(145, 75, 113, 0.2)),  to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 30, 50% 50%, 90, from(rgba(145, 75, 113, 0)), color-stop(0.5, rgba(145, 75, 113, 0.2)), to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 30, 50% 50%, 50, from(rgba(37, 85, 79, 0.2)), color-stop(0.2, rgba(37,85,79, 0.3)), to(transparent)),        
+
+    -webkit-gradient(radial, 50% 50%, 16, 50% 50%, 20, from(rgba(37, 85, 79, 0.2)), color-stop(0.2, rgba(37,85,79, 0.3)), to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 26, 50% 50%, 30, from(rgba(37, 85, 79, 0.2)), color-stop(0.2, rgba(37,85,79, 0.3)), to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 36, 50% 50%, 40, from(rgba(37, 85, 79, 0.3)), color-stop(0.2, rgba(37,85,79, 0.4)), to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 30, 50% 50%, 50, from(rgba(114, 209, 244, 0.1)), color-stop(0.2, rgba(114, 209, 244, 0.1)), to(transparent)),        
+
+    -webkit-gradient(radial, 50% 50%, 16, 50% 50%, 20, from(rgba(114, 209, 244, 0.1)), color-stop(0.2, rgba(114, 209, 244, 0.2)), to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 26, 50% 50%, 30, from(rgba(114, 209, 244, 0.1)), color-stop(0.2, rgba(114, 209, 244, 0.2)), to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 36, 50% 50%, 40, from(rgba(114, 209, 244, 0.2)), color-stop(0.2, rgba(114, 209, 244, 0.3)), to(transparent))         
+    ;
+
+background-image: 
+
+	-webkit-radial-gradient(circle contain, rgba(150, 111, 195, 0.2) 36px, rgba(150, 111, 195, 0.3) 38px, transparent 40px),
+
+	-webkit-radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+
+	-webkit-radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+	
+	-webkit-radial-gradient(circle contain, rgba(145, 75, 113, 0.2) 38px, rgba(145, 75, 113, 0.3) 41px, transparent 46px),
+
+	-webkit-radial-gradient(circle contain, rgba(145, 75, 113, 0) 20px, rgba(145, 75, 113, 0.2) 38px, transparent 80px),        
+
+	-webkit-radial-gradient(circle contain, rgba(145, 75, 113, 0) 30px, rgba(145, 75, 113, 0.2) 60px, transparent 90px),        
+	
+	-webkit-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 30px, rgba(37, 85, 79, 0.3) 34px, transparent 50px),
+
+	-webkit-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 16px, rgba(37, 85, 79, 0.3) 17px, transparent 20px),          
+
+	-webkit-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 26px, rgba(37, 85, 79, 0.3) 27px, transparent 30px),                  
+
+	-webkit-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 36px, rgba(37, 85, 79, 0.3) 37px, transparent 40px),          
+	
+	-webkit-radial-gradient(circle contain, rgba(114, 209, 244, 0.1) 30px, rgba(114, 209, 244, 0.1) 34px, transparent 50px),          
+
+	-webkit-radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 16px, rgba(114, 209, 244, 0.3) 17px, transparent 20px),          
+
+	-webkit-radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 26px, rgba(114, 209, 244, 0.3) 27px, transparent 30px),            
+
+	-webkit-radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 36px, rgba(114, 209, 244, 0.3) 37px, transparent 40px)             
+	;   
+
+background-image: 
+
+	-moz-radial-gradient(circle contain, rgba(150, 111, 195, 0.2) 36px, rgba(150, 111, 195, 0.3) 38px, transparent 40px),
+
+    -moz-radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+
+    -moz-radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+
+    -moz-radial-gradient(circle contain, rgba(145, 75, 113, 0.2) 38px, rgba(145, 75, 113, 0.3) 41px, transparent 46px),
+
+    -moz-radial-gradient(circle contain, rgba(145, 75, 113, 0) 20px, rgba(145, 75, 113, 0.2) 38px, transparent 80px),        
+
+    -moz-radial-gradient(circle contain, rgba(145, 75, 113, 0) 30px, rgba(145, 75, 113, 0.2) 60px, transparent 90px),        
+
+    -moz-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 30px, rgba(37, 85, 79, 0.3) 34px, transparent 50px),
+
+    -moz-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 16px, rgba(37, 85, 79, 0.3) 17px, transparent 20px),          
+
+    -moz-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 26px, rgba(37, 85, 79, 0.3) 27px, transparent 30px),                  
+
+    -moz-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 36px, rgba(37, 85, 79, 0.3) 37px, transparent 40px),          
+
+    -moz-radial-gradient(circle contain, rgba(114, 209, 244, 0.1) 30px, rgba(114, 209, 244, 0.1) 34px, transparent 50px),          
+
+    -moz-radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 16px, rgba(114, 209, 244, 0.3) 17px, transparent 20px),          
+
+    -moz-radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 26px, rgba(114, 209, 244, 0.3) 27px, transparent 30px),            
+
+    -moz-radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 36px, rgba(114, 209, 244, 0.3) 37px, transparent 40px)             
+    ;     
+
+background-image: 
+
+	-o-radial-gradient(circle contain, rgba(150, 111, 195, 0.2) 36px, rgba(150, 111, 195, 0.3) 38px, transparent 40px),
+
+    -o-radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+
+    -o-radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+
+    -o-radial-gradient(circle contain, rgba(145, 75, 113, 0.2) 38px, rgba(145, 75, 113, 0.3) 41px, transparent 46px),
+
+    -o-radial-gradient(circle contain, rgba(145, 75, 113, 0) 20px, rgba(145, 75, 113, 0.2) 38px, transparent 80px),        
+
+    -o-radial-gradient(circle contain, rgba(145, 75, 113, 0) 30px, rgba(145, 75, 113, 0.2) 60px, transparent 90px),        
+
+    -o-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 30px, rgba(37, 85, 79, 0.3) 34px, transparent 50px),
+
+    -o-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 16px, rgba(37, 85, 79, 0.3) 17px, transparent 20px),          
+
+    -o-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 26px, rgba(37, 85, 79, 0.3) 27px, transparent 30px),                  
+
+    -o-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 36px, rgba(37, 85, 79, 0.3) 37px, transparent 40px),          
+
+    -o-radial-gradient(circle contain, rgba(114, 209, 244, 0.1) 30px, rgba(114, 209, 244, 0.1) 34px, transparent 50px),          
+
+    -o-radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 16px, rgba(114, 209, 244, 0.3) 17px, transparent 20px),          
+
+    -o-radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 26px, rgba(114, 209, 244, 0.3) 27px, transparent 30px),            
+
+    -o-radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 36px, rgba(114, 209, 244, 0.3) 37px, transparent 40px)             
+    ;
+
+background-image: 
+
+	radial-gradient(circle contain, rgba(150, 111, 195, 0.2) 36px, rgba(150, 111, 195, 0.3) 38px, transparent 40px),
+
+    radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+
+    radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+
+    radial-gradient(circle contain, rgba(145, 75, 113, 0.2) 38px, rgba(145, 75, 113, 0.3) 41px, transparent 46px),
+
+    radial-gradient(circle contain, rgba(145, 75, 113, 0) 20px, rgba(145, 75, 113, 0.2) 38px, transparent 80px),        
+
+    radial-gradient(circle contain, rgba(145, 75, 113, 0) 30px, rgba(145, 75, 113, 0.2) 60px, transparent 90px),        
+
+    radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 30px, rgba(37, 85, 79, 0.3) 34px, transparent 50px),
+
+    radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 16px, rgba(37, 85, 79, 0.3) 17px, transparent 20px),          
+
+    radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 26px, rgba(37, 85, 79, 0.3) 27px, transparent 30px),                  
+
+    radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 36px, rgba(37, 85, 79, 0.3) 37px, transparent 40px),          
+
+    radial-gradient(circle contain, rgba(114, 209, 244, 0.1) 30px, rgba(114, 209, 244, 0.1) 34px, transparent 50px),          
+
+    radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 16px, rgba(114, 209, 244, 0.3) 17px, transparent 20px),          
+
+    radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 26px, rgba(114, 209, 244, 0.3) 27px, transparent 30px),            
+
+    radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 36px, rgba(114, 209, 244, 0.3) 37px, transparent 40px)       
+    ;
+
+-moz-background-size: 300px 200px;
+
+background-size: 300px 200px;
+
+background-position: 
+	30px -5px, 
+	80px -70px, 
+	10px -40px, 
+	50px -50px, 
+	20px -80px, 
+	60px -10px, 
+	-50px -60px, 
+	-60px -20px, 
+	-80px -80px, 
+	-160px -30px, 
+	20px -30px, 
+	130px -60px, 
+	180px -40px, 
+	180px 0px;   
+
+
+/* From http://nimbupani.com/bokeh-with-css3-gradients.html */
+background-image: -webkit-gradient(radial, 50% 50%, 36, 50% 50%, 40,from(rgba(150, 111, 195, 0.2)), color-stop(0.3, rgba(150, 111, 195, 0.3)),  to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 16, 50% 50%, 20, from(rgba(224, 124, 203, 0.1)), color-stop(0.2, rgba(224, 124, 203, 0.2)), to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 16, 50% 50%, 20, from(rgba(224, 124, 203, 0.1)), color-stop(0.2, rgba(224, 124, 203, 0.2)), to(transparent)),        
+
+    -webkit-gradient(radial, 50% 50%, 38, 50% 50%, 46, from(rgba(145, 75, 113, 0.3)), color-stop(0.3, rgba(145, 75, 113, 0.4)),  to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 20, 50% 50%, 80, from(rgba(145, 75, 113, 0)), color-stop(0.3, rgba(145, 75, 113, 0.2)),  to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 30, 50% 50%, 90, from(rgba(145, 75, 113, 0)), color-stop(0.5, rgba(145, 75, 113, 0.2)), to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 30, 50% 50%, 50, from(rgba(37, 85, 79, 0.2)), color-stop(0.2, rgba(37,85,79, 0.3)), to(transparent)),        
+
+    -webkit-gradient(radial, 50% 50%, 16, 50% 50%, 20, from(rgba(37, 85, 79, 0.2)), color-stop(0.2, rgba(37,85,79, 0.3)), to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 26, 50% 50%, 30, from(rgba(37, 85, 79, 0.2)), color-stop(0.2, rgba(37,85,79, 0.3)), to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 36, 50% 50%, 40, from(rgba(37, 85, 79, 0.3)), color-stop(0.2, rgba(37,85,79, 0.4)), to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 30, 50% 50%, 50, from(rgba(114, 209, 244, 0.1)), color-stop(0.2, rgba(114, 209, 244, 0.1)), to(transparent)),        
+
+    -webkit-gradient(radial, 50% 50%, 16, 50% 50%, 20, from(rgba(114, 209, 244, 0.1)), color-stop(0.2, rgba(114, 209, 244, 0.2)), to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 26, 50% 50%, 30, from(rgba(114, 209, 244, 0.1)), color-stop(0.2, rgba(114, 209, 244, 0.2)), to(transparent)),
+
+    -webkit-gradient(radial, 50% 50%, 36, 50% 50%, 40, from(rgba(114, 209, 244, 0.2)), color-stop(0.2, rgba(114, 209, 244, 0.3)), to(transparent))         
+    ;
+
+background-image: -webkit-radial-gradient(circle contain, rgba(150, 111, 195, 0.2) 36px, rgba(150, 111, 195, 0.3) 38px, transparent 40px),
+-webkit-radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+-webkit-radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+
+-webkit-radial-gradient(circle contain, rgba(145, 75, 113, 0.2) 38px, rgba(145, 75, 113, 0.3) 41px, transparent 46px),
+-webkit-radial-gradient(circle contain, rgba(145, 75, 113, 0) 20px, rgba(145, 75, 113, 0.2) 38px, transparent 80px),        
+-webkit-radial-gradient(circle contain, rgba(145, 75, 113, 0) 30px, rgba(145, 75, 113, 0.2) 60px, transparent 90px),        
+
+-webkit-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 30px, rgba(37, 85, 79, 0.3) 34px, transparent 50px),
+-webkit-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 16px, rgba(37, 85, 79, 0.3) 17px, transparent 20px),          
+-webkit-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 26px, rgba(37, 85, 79, 0.3) 27px, transparent 30px),                  
+-webkit-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 36px, rgba(37, 85, 79, 0.3) 37px, transparent 40px),          
+
+-webkit-radial-gradient(circle contain, rgba(114, 209, 244, 0.1) 30px, rgba(114, 209, 244, 0.1) 34px, transparent 50px),          
+-webkit-radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 16px, rgba(114, 209, 244, 0.3) 17px, transparent 20px),          
+-webkit-radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 26px, rgba(114, 209, 244, 0.3) 27px, transparent 30px),            
+-webkit-radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 36px, rgba(114, 209, 244, 0.3) 37px, transparent 40px)             
+;   
+
+background-image: -moz-radial-gradient(circle contain, rgba(150, 111, 195, 0.2) 36px, rgba(150, 111, 195, 0.3) 38px, transparent 40px),
+    -moz-radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+    -moz-radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+
+    -moz-radial-gradient(circle contain, rgba(145, 75, 113, 0.2) 38px, rgba(145, 75, 113, 0.3) 41px, transparent 46px),
+    -moz-radial-gradient(circle contain, rgba(145, 75, 113, 0) 20px, rgba(145, 75, 113, 0.2) 38px, transparent 80px),        
+    -moz-radial-gradient(circle contain, rgba(145, 75, 113, 0) 30px, rgba(145, 75, 113, 0.2) 60px, transparent 90px),        
+
+    -moz-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 30px, rgba(37, 85, 79, 0.3) 34px, transparent 50px),
+    -moz-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 16px, rgba(37, 85, 79, 0.3) 17px, transparent 20px),          
+    -moz-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 26px, rgba(37, 85, 79, 0.3) 27px, transparent 30px),                  
+    -moz-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 36px, rgba(37, 85, 79, 0.3) 37px, transparent 40px),          
+
+    -moz-radial-gradient(circle contain, rgba(114, 209, 244, 0.1) 30px, rgba(114, 209, 244, 0.1) 34px, transparent 50px),          
+    -moz-radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 16px, rgba(114, 209, 244, 0.3) 17px, transparent 20px),          
+    -moz-radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 26px, rgba(114, 209, 244, 0.3) 27px, transparent 30px),            
+    -moz-radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 36px, rgba(114, 209, 244, 0.3) 37px, transparent 40px)             
+    ;     
+
+background-image: -o-radial-gradient(circle contain, rgba(150, 111, 195, 0.2) 36px, rgba(150, 111, 195, 0.3) 38px, transparent 40px),
+    -o-radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+    -o-radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+
+    -o-radial-gradient(circle contain, rgba(145, 75, 113, 0.2) 38px, rgba(145, 75, 113, 0.3) 41px, transparent 46px),
+    -o-radial-gradient(circle contain, rgba(145, 75, 113, 0) 20px, rgba(145, 75, 113, 0.2) 38px, transparent 80px),        
+    -o-radial-gradient(circle contain, rgba(145, 75, 113, 0) 30px, rgba(145, 75, 113, 0.2) 60px, transparent 90px),        
+
+    -o-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 30px, rgba(37, 85, 79, 0.3) 34px, transparent 50px),
+    -o-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 16px, rgba(37, 85, 79, 0.3) 17px, transparent 20px),          
+    -o-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 26px, rgba(37, 85, 79, 0.3) 27px, transparent 30px),                  
+    -o-radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 36px, rgba(37, 85, 79, 0.3) 37px, transparent 40px),          
+
+    -o-radial-gradient(circle contain, rgba(114, 209, 244, 0.1) 30px, rgba(114, 209, 244, 0.1) 34px, transparent 50px),          
+    -o-radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 16px, rgba(114, 209, 244, 0.3) 17px, transparent 20px),          
+    -o-radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 26px, rgba(114, 209, 244, 0.3) 27px, transparent 30px),            
+    -o-radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 36px, rgba(114, 209, 244, 0.3) 37px, transparent 40px)             
+    ;
+
+background-image: radial-gradient(circle contain, rgba(150, 111, 195, 0.2) 36px, rgba(150, 111, 195, 0.3) 38px, transparent 40px),
+    radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+    radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px),
+
+    radial-gradient(circle contain, rgba(145, 75, 113, 0.2) 38px, rgba(145, 75, 113, 0.3) 41px, transparent 46px),
+    radial-gradient(circle contain, rgba(145, 75, 113, 0) 20px, rgba(145, 75, 113, 0.2) 38px, transparent 80px),        
+    radial-gradient(circle contain, rgba(145, 75, 113, 0) 30px, rgba(145, 75, 113, 0.2) 60px, transparent 90px),        
+
+    radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 30px, rgba(37, 85, 79, 0.3) 34px, transparent 50px),
+    radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 16px, rgba(37, 85, 79, 0.3) 17px, transparent 20px),          
+    radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 26px, rgba(37, 85, 79, 0.3) 27px, transparent 30px),                  
+    radial-gradient(circle contain, rgba(37, 85, 79, 0.2) 36px, rgba(37, 85, 79, 0.3) 37px, transparent 40px),          
+
+    radial-gradient(circle contain, rgba(114, 209, 244, 0.1) 30px, rgba(114, 209, 244, 0.1) 34px, transparent 50px),          
+    radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 16px, rgba(114, 209, 244, 0.3) 17px, transparent 20px),          
+    radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 26px, rgba(114, 209, 244, 0.3) 27px, transparent 30px),            
+    radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 36px, rgba(114, 209, 244, 0.3) 37px, transparent 40px)       
+    ;
+-moz-background-size: 300px 200px;
+background-size: 300px 200px;
+background-position: 30px -5px, 80px -70px, 10px -40px, 50px -50px, 20px -80px, 60px -10px, -50px -60px, -60px -20px, -80px -80px, -160px -30px, 20px -30px, 130px -60px, 180px -40px, 180px 0px;   

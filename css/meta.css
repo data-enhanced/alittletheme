@@ -1,0 +1,59 @@
+.my_meta_control input[type="text"] {
+	width: 40%;
+	display: block;
+	margin: 0 0 20px 0;
+}
+
+.my_meta_control input[type="checkbox"], .my_meta_control input[type="radio"] {
+	margin: 0 0 0 20px;
+	}
+
+.my_meta_control label {
+	font-weight: bold;
+	}
+
+.my_meta_control textarea {
+	width: 100%;
+	clear: both;
+	}
+	
+#dynamic_fields {
+	margin: 20px 0 20px 0;
+	}
+
+#dynamic_fields label {
+	clear: both;
+	display: block;
+	margin: 20px 0 0 0;
+	}
+
+#dynamic_fields input {
+	float: left;
+	display: inline;
+	}
+	
+	.delete {
+		color: red;
+		float: left;
+		line-height: 1.5;
+		}
+#add-panel {
+	float: right;
+	}
+
+.my_meta_control select {
+	width: 200px;
+	}	
+
+.my_meta_control .multi-select {
+	min-height: 150px;
+	}	
+/*
+#dynamic_fields .mceLayout {
+	min-height: 400px;	
+	}
+*/
+
+.my_meta_control .long-input input {
+	width: 100%;
+	}
