@@ -27,6 +27,7 @@
 <!--[if IE 8 ]><html <?php language_attributes(); ?> class="no-js ie8"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 	<head>
+		<?php include("_deviceDetect.php");?>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 
 	  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
