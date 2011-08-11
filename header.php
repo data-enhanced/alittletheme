@@ -9,6 +9,7 @@
  * Markup based on Mobile Boilerplate v1.1
  * and HTML5 Boilerplate v1.0
  */
+ //include("")
 ?><!doctype html>
 
 <!-- If Mobile touch ... -->
@@ -27,7 +28,7 @@
 <!--[if IE 8 ]><html <?php language_attributes(); ?> class="no-js ie8"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 	<head>
-		<?php include("_deviceDetect.php");?>
+		<?php //include("_deviceDetect.php");?>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 
 	  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
@@ -94,6 +95,32 @@
 	<body <?php body_class('clearfix'); ?>>
 		<header id="siteheader" role="banner" class="clearfix">
 		<div class="container">
+<?php
+/* debugging code
+	echo "Cookies:<br/>";
+	print_r($_COOKIE);
+
+	echo "<br/><br/>Session:<br/>";
+	print_r($_SESSION);
+	
+	echo "<br/><br/>Device:<br/>";
+	if(BASIC) {
+		echo "I'm BASIC<br/>";
+	} 
+
+	if(TOUCH) {
+		echo "I'm TOUCH<br/>";
+	} 
+			
+	if(MOBILE) {
+		echo "I'm MOBILE<br/>";
+	} 
+	
+	if(DESKTOP) {
+		echo "I'm DESKTOP<br/>";
+	}
+*/
+?>
 			<h1 class="sitelogo"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" id="mainlogo"><?php bloginfo( 'name' ); ?></a></h1>
 			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 									

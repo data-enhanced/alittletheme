@@ -517,37 +517,241 @@ function remove_thumbnail_dimensions( $html ) {
 }
 
 // ---------------------------------------------
+// Device Detection 
+// ---------------------------------------------
+  
+/*
+	1. device_session()	
+		The first function is to check for the cookies/sessions that will 
+		tell us what device we're on, and to set them / override them 
+		if neccessary. This has to happen BEFORE any HTML output 
+
+	2. device_detect()	
+		The second step is to, if there is no cookie or session for the device,
+		to run some javascript to test what device it is by comparing the browser width
+		against a defined variable. 
+
+	To switch on the front end, simply add one of these to the end of a URL and when the 
+	user clicks on it, it will override the automagical detection:
+	?device=1 (or true, or blah blah blah. As long as the value is set)
+	For example, all the links below will work: 
+	
+	<h3>Switch To..</h3>
+	<ul>
+		<li><a href="/?basic=1">Basic</a></li>
+		<li><a href="/?mobile=yes">Mobile</a></li>
+		<li><a href="/?full=true">Full</a></li>
+	</ul>
+	
+	If for some reason, the url already has a ? in it, just use &:
+	<li><a href="/?get=woot&full=1">Desktop</a></li>
+
+	here's some debugging code down here. Comment/uncomment as 
+	needed in the HTML somewhere. 
+
+	if(BASIC) {
+			echo "I'm BASIC<br/>";
+		} 
+		
+	if(MOBILE) {
+		echo "I'm MOBILE<br/>";
+	} 
+
+	if(TOUCH) {
+		echo "I'm TOUCH<br/>";
+	} 
+	
+	if(DESKTOP) {
+		echo "I'm DESKTOP<br/>";
+	}
+	echo "Supposed Width:".$_COOKIE['width'].'<br/>';
+	echo "Pixel Density:".$_COOKIE['pixelDensity'].'<br/>';
+	echo "True Width:".$_COOKIE['trueWidth'].'<br/>'	
+*/
+
+	// Some variables
+	$device_config = array(
+			'width' => 800, /* Under this is mobile, over is desktop */
+			'cookie_expires' => 365, /* Ammount of days it takes the cookie to expire */			);
+	
+	// Device Session 
+	function device_session() {
+		global $device_config;
+		session_start();
+		
+		// only run this junk if we've run through the javascript tests	or the 
+		// session override is set
+		if(isset($_COOKIE['tested'])||isset($_SESSION['override'])) {
+
+			// Default device set . 1 = that's the one
+				$test_basic = 1; 
+				$test_mobile = 0;
+				$test_desktop = 0;
+				$test_touch = 0;
+	
+		// So, we've tested. Translate that to PHP
+			if(isset($_COOKIE['smart'])) {
+				$test_basic = 0;
+			}
+			
+			// Mobile or desktop? If the cookie's set, let's tell PHP
+			if(isset($_COOKIE['browser'])) {
+				switch ($_COOKIE['browser']) {
+				    case 'desktop':
+						$test_desktop = 1;
+				        break;
+				    case 'mobile':
+						$test_mobile = 1;
+				        break;
+				}       
+			}
+	
+		// Touch? 
+			if(isset($_COOKIE['touch'])||isset($_SESSION['touch'])) {
+				$_SESSION['touch'] = true;
+				$test_touch = 1;
+			}
+	
+			
+	// So, we've tested. But, does the user want us to override? 
+		// All the possiblities ... 
+			$set_basic = strip_tags($_GET['basic']);
+			$set_mobile = strip_tags($_GET['mobile']);
+			$set_desktop = strip_tags($_GET['full']);
+	
+			// if any one of those are set, set the override
+			if($set_basic) {
+				$_SESSION['override'] = 'basic';				
+			} elseif($set_mobile) {
+				$_SESSION['override'] = 'mobile';				
+			} elseif($set_desktop) {
+				$_SESSION['override'] = 'full';				
+			}
+			
+		// If there's an override, reset everything and go with the override	
+			if(isset($_SESSION['override'])) {
+			
+				// let's just reset this stuff to be safe
+				$test_basic = 0;
+				$test_mobile = 0;
+				$test_desktop = 0;
+	
+				switch ($_SESSION['override']) {
+				    case 'basic':
+						setcookie("browser", 'basic', time()+(86400*$device_config['cookie_expires']));  
+						$test_basic = 1;
+				        break;
+				    case 'mobile':
+						setcookie("browser", 'mobile', time()+(86400*$device_config['cookie_expires']));  
+						$test_mobile = 1;
+				        break;
+				    case 'full':
+						setcookie("browser", 'full', time()+(86400*$device_config['cookie_expires']));  
+						$test_desktop = 1;
+				        break;
+				}
+			}	
+		// NOW we finally get to set the constants. 	
+			define("BASIC",$test_basic);
+			define("MOBILE",$test_mobile);
+			define("TOUCH",$test_touch);
+			define("DESKTOP",$test_desktop);
+		
+		}
+	}
+	add_action( 'init', 'device_session' );
+
+	
+	
+	// Device detection
+	function device_detect() {
+		global $device_config;
+		if(!isset($_SESSION['tested']) && !isset($_COOKIE['tested'])) { ?>	
+			<script type="text/javascript">function setCookie(c_name,value,exdays){var exdate=new Date();exdate.setDate(exdate.getDate()+exdays);var c_value=escape(value)+((exdays==null)?"":"; expires="+exdate.toUTCString());document.cookie=c_name+"="+c_value}function getCookie(c_name){var i,x,y,ARRcookies=document.cookie.split(";");for(i=0;i<ARRcookies.length;i++){x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);x=x.replace(/^\s+|\s+$/g,"");if(x==c_name){return unescape(y)}}}function HasClassName(objElement,strClass){if(objElement.className){var arrList=objElement.className.split(' ');var strClassUpper=strClass.toUpperCase();for(var i=0;i<arrList.length;i++){if(arrList[i].toUpperCase()==strClassUpper){return true}}}return false}
+
+			// OK, NOW down to business. first step, are cookies even usable? 
+			setCookie("cookies_enabled","yes",<?php echo $device_config['cookie_expires']; ?>);
+
+			if(getCookie('cookies_enabled')) {
+		
+				// So we're not basic. Well then, let's figure out the size	
+				var screen_width = window.innerWidth;
+				
+			// Now, are we dealing with a higher density pixel count? We're targeting 800 REAL pixels. Yes, I'm talking to you Android and iPhone 4	
+				var ppi = window.devicePixelRatio;
+											
+				if(typeof ppi == "undefined") {
+					// should be dealing with a 1 ratio browser here
+					var width = screen_width;
+				} else {
+					// Determine the real width				
+					var width = screen_width/ppi;			
+				}
+				
+			// Set them cookies
+				setCookie("width",screen_width,<?php echo $device_config['cookie_expires']; ?>);
+				setCookie("trueWidth",width,<?   echo $device_config['cookie_expires']; ?>);
+				setCookie("pixelDensity",ppi,<?php echo $device_config['cookie_expires']; ?>);
+				setCookie("smart","yes",<?php echo $device_config['cookie_expires']; ?>);
+				
+				// It's a small browser if 
+				if(width < <?php echo $device_config['width']; ?>) {
+					setCookie("browser","mobile",<?php echo $device_config['cookie_expires']; ?>);
+				} else {
+					setCookie("browser","desktop",<?php echo $device_config['cookie_expires']; ?>);
+				}
+			
+			// If this isn't set, we have to reload the page so that PHP can read the coookies
+				var tested = getCookie('tested'); 
+			
+				if(!tested) {
+					setCookie("tested","yes",<?php echo $device_config['cookie_expires']; ?>);
+					window.location = window.location;
+				}
+			
+			}
+
+			
+			</script> 
+			
+		<?php
+		}
+	}
+	add_action( 'wp_head', 'device_detect' );
+
+
+// ---------------------------------------------
 // Custom Post Types
 // ---------------------------------------------
 
-add_action( 'init', 'create_my_post_types' );
-
-function create_my_post_types() {
-	register_post_type( 'document',
-		array(
-			'description' => __( 'A document is super duper!s' ),			
-			'labels' => array(
-				'name' => __( 'Documents' ),
-				'singular_name' => __( 'Document' ),
-				'add_new' => __( 'Add New' ),
-				'add_new_item' => __( 'Add New Document' ),
-				'edit' => __( 'Edit' ),
-				'edit_item' => __( 'Edit Document' ),
-				'new_item' => __( 'New Document' ),
-				'view' => __( 'View Documents' ),
-				'view_item' => __( 'View Document' ),
-				'search_items' => __( 'Search Documents' ),
-				'not_found' => __( 'No documents found' ),
-				'not_found_in_trash' => __( 'No documents found in Trash' ),
-				'parent' => __( 'Parent Document' ),			
-			),
-			'public' => true,
-			'menu_position' => 20,
-/* 			'menu_icon' => get_stylesheet_directory_uri() . '/images/super-duper.png', */
-			'supports' => array( 'title', 'editor', 'thumbnail' ),
-		)
-	);
-}
+	add_action( 'init', 'create_my_post_types' );
+	
+	function create_my_post_types() {
+		register_post_type( 'document',
+			array(
+				'description' => __( 'A document is super duper!s' ),			
+				'labels' => array(
+					'name' => __( 'Documents' ),
+					'singular_name' => __( 'Document' ),
+					'add_new' => __( 'Add New' ),
+					'add_new_item' => __( 'Add New Document' ),
+					'edit' => __( 'Edit' ),
+					'edit_item' => __( 'Edit Document' ),
+					'new_item' => __( 'New Document' ),
+					'view' => __( 'View Documents' ),
+					'view_item' => __( 'View Document' ),
+					'search_items' => __( 'Search Documents' ),
+					'not_found' => __( 'No documents found' ),
+					'not_found_in_trash' => __( 'No documents found in Trash' ),
+					'parent' => __( 'Parent Document' ),			
+				),
+				'public' => true,
+				'menu_position' => 20,
+	/* 			'menu_icon' => get_stylesheet_directory_uri() . '/images/super-duper.png', */
+				'supports' => array( 'title', 'editor', 'thumbnail' ),
+			)
+		);
+	}
 
 // include the class in your theme or plugin
 include_once 'wpalchemy/MetaBox.php';
