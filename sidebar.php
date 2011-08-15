@@ -23,18 +23,18 @@
 			</li>
 
 			<li>
-				<h3><?php _e( 'Archives', 'boilerplate' ); ?></h3>
+				<h3><?php //_e( 'Archives', 'boilerplate' ); ?></h3>
 				<ul>
-					<?php wp_get_archives( 'type=monthly' ); ?>
+					<?php //wp_get_archives( 'type=monthly' ); ?>
 				</ul>
 			</li>
 
 			<li>
-				<h3><?php _e( 'Meta', 'boilerplate' ); ?></h3>
+				<h3><?php //_e( 'Meta', 'boilerplate' ); ?></h3>
 				<ul>
-					<?php wp_register(); ?>
-					<li><?php wp_loginout(); ?></li>
-					<?php wp_meta(); ?>
+					<?php //wp_register(); ?>
+					<li><?php //wp_loginout(); ?></li>
+					<?php //wp_meta(); ?>
 				</ul>
 			</li>
 
