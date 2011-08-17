@@ -760,7 +760,6 @@ include_once 'wpalchemy/MediaAccess.php';
 // include css to help style our custom meta boxes
 if (is_admin()) { 
 	wp_enqueue_style('custom_meta_css', get_bloginfo('stylesheet_directory') . '/css/meta.css');
-	wp_enqueue_script('jquery_livequery', get_bloginfo('stylesheet_directory') . '/js/jquery.livequery.js'); 
 }
  
 $custom_upload = new WPAlchemy_MediaAccess();
@@ -784,4 +783,35 @@ if ( is_admin() ) {
     }
     add_action('admin_head', 'add_post_enctype');
 } 
+
+// This allows us to have multiple WYSIWYG editors dynamically added. Requires livequery, 
+if (is_admin()) { 
+	wp_enqueue_script('jquery_livequery', get_bloginfo('stylesheet_directory') . '/js/jquery.livequery.js'); 
+}
+
+add_action('admin_print_footer_scripts','my_admin_print_footer_scripts',99);
+function my_admin_print_footer_scripts()
+{
+	?><script type="text/javascript">/* <![CDATA[ */
+		
+		jQuery(function($)
+		{
+			var i=1;
+			$('.customEditor textarea:visible').livequery(function(e)
+			{
+				var id = $(this).attr('id');
+ 
+				if (!id)
+				{
+					id = 'customEditor-' + i++;
+					$(this).attr('id',id);
+				}
+
+				tinyMCE.execCommand('mceAddControl', false, id);
+ 
+			});
+		});
+	/* ]]> */</script><?php
+}
+
 ?>
